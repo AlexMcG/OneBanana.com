@@ -6,4 +6,9 @@ public class LoginDAO {
 		// TODO Auto-generated constructor stub
 	}
 
+	public boolean checkLogin(String uname, String password) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }

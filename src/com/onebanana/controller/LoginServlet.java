@@ -1,10 +1,13 @@
 package com.onebanana.controller;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.onebanana.model.LoginModel;
 
 /**
  * Servlet implementation class LoginServlet
@@ -30,7 +33,13 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		String uname = request.getParameter("uname");
+		String password = request.getParameter("password");
+		
+		if(uname != null && password != null){
+			LoginModel objLoginModel = new LoginModel();
+			boolean locinCheck = objLoginModel.checkLogin(uname, password);
+		}
 	}
 
 }
