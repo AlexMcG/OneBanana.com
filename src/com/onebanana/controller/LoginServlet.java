@@ -7,16 +7,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class LoginTransactionServlet
+ * Servlet implementation class LoginServlet
  */
-public class LoginTransactionServlet extends HttpServlet {
+public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+
     /**
-     * @see HttpServlet#HttpServlet()
+     * Default constructor. 
      */
-    public LoginTransactionServlet() {
-        super();
+    public LoginServlet() {
         // TODO Auto-generated constructor stub
     }
 
