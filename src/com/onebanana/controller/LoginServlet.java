@@ -37,7 +37,7 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		String uname = request.getParameter("uname");
+		String uname = request.getParameter("email");
 		String password = request.getParameter("password");
 
 		if (uname != null && password != null) {
@@ -47,6 +47,7 @@ public class LoginServlet extends HttpServlet {
 				request.getRequestDispatcher("/jsp/home.jsp").forward(request,
 						response);
 			} else {
+				request.setAttribute("nullMsg", "Username and/or Password cannot be empty!");
 				response.sendRedirect("index.html");
 			}
 		} else {
