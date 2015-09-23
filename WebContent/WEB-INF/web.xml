@@ -11,12 +11,12 @@
   </welcome-file-list>
   <servlet>
     <description></description>
-    <display-name>LoginTransactionServlet</display-name>
-    <servlet-name>LoginTransactionServlet</servlet-name>
-    <servlet-class>com.onebanana.controller.LoginTransactionServlet</servlet-class>
+    <display-name>LoginServlet</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.onebanana.controller.LoginServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>LoginTransactionServlet</servlet-name>
+    <servlet-name>LoginServlet</servlet-name>
     <url-pattern>/process</url-pattern>
   </servlet-mapping>
 </web-app>
