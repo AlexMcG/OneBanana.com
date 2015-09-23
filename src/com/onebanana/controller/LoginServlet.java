@@ -15,31 +15,42 @@ import com.onebanana.model.LoginModel;
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-    /**
-     * Default constructor. 
-     */
-    public LoginServlet() {
-        // TODO Auto-generated constructor stub
-    }
+	/**
+	 * Default constructor.
+	 */
+	public LoginServlet() {
+		// TODO Auto-generated constructor stub
+	}
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
 		String uname = request.getParameter("uname");
 		String password = request.getParameter("password");
-		
-		if(uname != null && password != null){
+
+		if (uname != null && password != null) {
 			LoginModel objLoginModel = new LoginModel();
-			boolean locinCheck = objLoginModel.checkLogin(uname, password);
+			boolean loginCheck = objLoginModel.checkLogin(uname, password);
+			if (loginCheck) {
+				request.getRequestDispatcher("/jsp/home.jsp").forward(request,
+						response);
+			} else {
+				response.sendRedirect("index.html");
+			}
+		} else {
+			response.sendRedirect("index.html");
 		}
 	}
-
 }

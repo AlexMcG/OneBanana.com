@@ -4,6 +4,7 @@
 package com.onebanana.model;
 
 import com.onebanana.dao.LoginDAO;
+import com.onebanana.security.MD5Checksum;
 
 /**
  * @author hsangh
@@ -11,17 +12,8 @@ import com.onebanana.dao.LoginDAO;
  */
 public class LoginModel {
 
-	/**
-	 * 
-	 */
-	public LoginModel() {
-		// TODO Auto-generated constructor stub
-	}
-
 	public boolean checkLogin(String uname, String password) {
 		LoginDAO objLoginDao = new LoginDAO();
-		
-		return objLoginDao.checkLogin(uname, password);
+		return objLoginDao.checkLogin(uname, MD5Checksum.crypt(password));
 	}
-
 }
