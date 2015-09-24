@@ -258,7 +258,8 @@
 /*** My stuff ***/
 
 body {
-    padding-top: 90px;
+	/*cause space between nav bar and intro image*/
+    /*padding-top: 90px;*/
 }
 .panel-login {
 	border-color: #ccc;
