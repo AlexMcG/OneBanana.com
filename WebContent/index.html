@@ -109,7 +109,7 @@
 															<input type="password" name="password" id="password"
 																tabindex="2" class="form-control" placeholder="Password" required>
 														</div>
-														<div class="form-group text-center">
+														<div class="form-group text-center" style="display: none">
 															<input type="checkbox" tabindex="3" class=""
 																name="remember" id="remember"> <label
 																for="remember"> Remember Me</label>
@@ -145,28 +145,26 @@
 																value="" required>
 														</div>
 														<div class="form-group">
-															<input type="password" name="password" id="password"
-																tabindex="2" class="form-control" data-ng-model="password" placeholder="Password" required>
+															<input type="password" name="password" id="rPassword"
+																tabindex="2" class="form-control" placeholder="Password" required>
 														</div>
-														<div class="form-group" ng-app="match" ng-controller="matchCtrl">
+														<div class="form-group">
 															<input type="password" name="confirm-password"
-																id="confirm-password" tabindex="2" class="form-control"
-																placeholder="Confirm Password" data-ng-model="cpassword" 
-																onblur="match()" required>
+																id="confirm-password" tabindex="3" class="form-control"
+																placeholder="Confirm Password" onblur="match()" required>
 														</div>
-														<span ng-show="IsMatch">Passwords do not match!</span>
 														<div class="form-group">
 															<input type="text" name="firstName" id="firstName"
-																tabindex="1" class="form-control"
+																tabindex="4" class="form-control"
 																placeholder="First Name" value="" required>
 														</div>
 														<div class="form-group">
 															<input type="text" name="lastName" id="lastName"
-																tabindex="1" class="form-control"
+																tabindex="5" class="form-control"
 																placeholder="Last Name" value="" required>
 														</div>
 														<div class="form-group">
-															<input type="tel" name="phoneNumber" id="phoneNumber" tabindex="1"
+															<input type="tel" name="phoneNumber" id="phoneNumber" tabindex="6"
 																class="form-control" placeholder="Phone Number" value=""
 																required>
 														</div>
@@ -174,7 +172,7 @@
 															<div class="row">
 																<div class="col-sm-6 col-sm-offset-3">
 																	<input type="submit" name="register-submit"
-																		id="register-submit" tabindex="4"
+																		id="register-submit" tabindex="7"
 																		class="form-control btn btn-register"
 																		value="Register Now">
 																</div>
@@ -304,7 +302,7 @@
 
 	<!-- My javascript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-	<script src="js/angular.js"></script>
+	<script src="js/match.js"></script>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
