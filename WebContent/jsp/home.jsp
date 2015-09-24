@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Home</title>
 <script type="text/javascript" src="http://platform.linkedin.com/in.js">
   api_key:77a3gl1p3tvgf0
   onLoad: OnLinkedInFrameworkLoad
