@@ -21,12 +21,12 @@ public class LoginDAO {
 		PreparedStatement ps = null;
 		
 		try {
-			ps = con.prepareStatement("SELECT USERNAME,PASSWORD FROM  LOGINCREDENTIALS WHERE USERNAME =?");
+			ps = con.prepareStatement("SELECT USERNAME,PASSWORD FROM  LOGINCREDENTIALS WHERE USERNAME =? AND PASSWORD=?");
         	ps.setString(1, uname);
-            //ps.setString(2, password);
-			System.out.println(password);
+            ps.setString(2, password);
+			//System.out.println(password);
 			rs = ps.executeQuery();
-			System.out.println(rs.getRow());
+			//System.out.println(rs.getRow());
 			if(rs.next())
 				return true;
 			

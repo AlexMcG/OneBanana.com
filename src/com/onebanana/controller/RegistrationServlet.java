@@ -38,9 +38,9 @@ public class RegistrationServlet extends HttpServlet {
 		
 		String uname = request.getParameter("email");
 		String password = request.getParameter("password");
-		String fname = request.getParameter("fname");
-		String lname = request.getParameter("lname");
-		String phone = request.getParameter("phone");
+		String fname = request.getParameter("firstName");
+		String lname = request.getParameter("lastName");
+		String phone = request.getParameter("phoneNumber");
 		RegisterUserBean objRegisterBean = new RegisterUserBean();
 		objRegisterBean.setUname(uname);
 		objRegisterBean.setFname(fname);
