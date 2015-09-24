@@ -3,9 +3,8 @@ function match() {
 	var cpVal = document.getElementById("confirm-password").value;
 	if ((pVal != "") && (cpVal != "")) {
 		if (cpVal === pVal) {
-			alert("Match!");
 		} else {
-			alert("password: " +pVal+" != confirm password: "+cpVal+".\n Passwords do not match!");
+			alert("Password fields do not match!");
 			document.getElementById("confirm-password").value = "";
 		}
 	}

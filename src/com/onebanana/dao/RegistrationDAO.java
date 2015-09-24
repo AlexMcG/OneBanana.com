@@ -16,6 +16,7 @@ public class RegistrationDAO {
 		// TODO Auto-generated method stub
 		
 		Connection con = Dbconnection.getConnection();
+		System.out.println(con.toString());
 		PreparedStatement ps = null;
 		PreparedStatement ps1 = null;
 		try {
