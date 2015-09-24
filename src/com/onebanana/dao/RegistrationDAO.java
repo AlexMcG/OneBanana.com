@@ -27,10 +27,6 @@ public class RegistrationDAO {
 			ps1.setString(2, objRegisterBean.getFname());
 			ps1.setString(3, objRegisterBean.getLname());
 			ps1.setString(4, objRegisterBean.getPhone());
-			
-			
-			
-			
 			ps.executeQuery();
 			ps1.executeQuery();
 			
