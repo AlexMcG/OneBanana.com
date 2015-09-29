@@ -39,6 +39,7 @@
   onLoad: OnLinkedInFrameworkLoad
   authorize:true
 </script>
+<script type="text/javascript" src="js/facebookAuth.js"></script>
 </head>
 
 <body>
@@ -129,6 +130,9 @@
 																		id="register-submit" tabindex="7"
 																		class="form-control btn btn-register"
 																		value="Update">
+																	<div class="form-group">
+
+																	</div>
 																</div>
 															</div>
 														</div>
@@ -136,7 +140,34 @@
 													<script type="in/Login"></script>
 												</div>
 												<div class="col-lg-12 tab-pane fade" id="tab2default">
-													
+													<form id="register-form" action="register" method="post"
+														role="form" style="display: none;">
+														<div class="form-group">
+															<input type="text" name="fname" id="fname" tabindex="1"
+																class="form-control" placeholder="First Name" value=""
+																required>
+														</div>
+														<div class="form-group">
+															<input type="text" name="lname" id="lname" tabindex="2"
+																class="form-control" placeholder="Last Name" required>
+														</div>
+														<div class="form-group">
+															<input type="text" name="pictureurl" id="pictureurl"
+																tabindex="6" class="form-control"
+																placeholder="Picture URL" value="" required>
+														</div>
+														<div class="form-group">
+															<div class="row">
+																<div class="col-sm-6 col-sm-offset-3">
+																	<input type="submit" name="register-submit"
+																		id="register-submit" tabindex="7"
+																		class="form-control btn btn-register"
+																		value="Update">
+																</div>
+															</div>
+														</div>
+													</form>
+													<fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
 												</div>
 											</div>
 										</div>
