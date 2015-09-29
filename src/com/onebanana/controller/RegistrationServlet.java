@@ -51,7 +51,7 @@ public class RegistrationServlet extends HttpServlet {
 			RegistrationModel objRegistrationModel = new RegistrationModel();
 			boolean registerCheck = objRegistrationModel.registerUser(objRegisterBean);
 			if (registerCheck) {
-				request.getRequestDispatcher("/jsp/home.jsp").forward(request,
+				request.getRequestDispatcher("home.jsp").forward(request,
 						response);
 			} else {
 				response.sendRedirect("index.html");

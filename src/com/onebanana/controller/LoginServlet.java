@@ -44,7 +44,7 @@ public class LoginServlet extends HttpServlet {
 			LoginModel objLoginModel = new LoginModel();
 			boolean loginCheck = objLoginModel.checkLogin(uname, password);
 			if (loginCheck) {
-				request.getRequestDispatcher("/jsp/home.jsp").forward(request,
+				request.getRequestDispatcher("home.jsp").forward(request,
 						response);
 			} else {
 				request.setAttribute("nullMsg", "Username and/or Password cannot be empty!");
