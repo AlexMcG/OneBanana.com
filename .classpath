@@ -8,5 +8,7 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="D:/JAVA LAB/servlet-api-3.0.jar/servlet-api-3.0.jar"/>
+	<classpathentry kind="lib" path="D:/JAVA LAB/jersey-bundle-1.9.1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

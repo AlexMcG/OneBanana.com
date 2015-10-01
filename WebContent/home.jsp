@@ -143,16 +143,16 @@
 													<form id="register-form" action="register" method="post"
 														role="form" style="display: none;">
 														<div class="form-group">
-															<input type="text" name="fname" id="fname" tabindex="1"
+															<input type="text" name="fname" id="fbfname" tabindex="1"
 																class="form-control" placeholder="First Name" value=""
 																required>
 														</div>
 														<div class="form-group">
-															<input type="text" name="lname" id="lname" tabindex="2"
+															<input type="text" name="lname" id="fblname" tabindex="2"
 																class="form-control" placeholder="Last Name" required>
 														</div>
 														<div class="form-group">
-															<input type="text" name="pictureurl" id="pictureurl"
+															<input type="text" name="pictureurl" id="fbpictureurl"
 																tabindex="6" class="form-control"
 																placeholder="Picture URL" value="" required>
 														</div>
@@ -167,7 +167,9 @@
 															</div>
 														</div>
 													</form>
-													<fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+													<div id="facebookLogin">
+														<fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+													</div>
 												</div>
 											</div>
 										</div>
