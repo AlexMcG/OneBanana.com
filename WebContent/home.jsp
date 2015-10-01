@@ -99,7 +99,7 @@
 										<div class="panel-heading">
 											<ul class="nav nav-tabs">
 												<li class="active"><a href="#tab1default" id="login-form-link" data-toggle="tab">LinkedIn</a></li>
-												<li><a href="#tab2default" id="register-form-link" data-toggle="tab">Other Social Networks Coming Soon!</a></li>
+												<li><a href="#tab2default" id="register-form-link" data-toggle="tab">Facebook</a></li>
 											</ul>
 										</div>
 										<div class="panel-body">
@@ -126,10 +126,10 @@
 														<div class="form-group">
 															<div class="row">
 																<div class="col-sm-6 col-sm-offset-3">
-																	<input type="submit" name="register-submit"
+																	<button name="register-submit"
 																		id="register-submit" tabindex="7"
 																		class="form-control btn btn-register"
-																		value="Update">
+																		>Update</button>
 																	<div class="form-group">
 
 																	</div>
@@ -159,10 +159,10 @@
 														<div class="form-group">
 															<div class="row">
 																<div class="col-sm-6 col-sm-offset-3">
-																	<input type="submit" name="register-submit"
+																	<button name="register-submit"
 																		id="register-submit" tabindex="7"
 																		class="form-control btn btn-register"
-																		value="Update">
+																		>Update</button>
 																</div>
 															</div>
 														</div>

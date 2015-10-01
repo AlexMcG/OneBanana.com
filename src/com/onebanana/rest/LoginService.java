@@ -15,9 +15,13 @@ public class LoginService {
 	@POST
 	@Path("/validate")
 	@Produces(MediaType.TEXT_HTML)
-	public Boolean queryForm(@FormParam("uname") String uname, @FormParam("pwd") String pwd){
+	public String queryForm(@FormParam("uname") String uname, @FormParam("pwd") String pwd){
 		pwd = MD5Checksum.crypt(pwd);
 		LoginDAO objLoginDAO = new LoginDAO();
-		return objLoginDAO.checkLogin(uname, pwd);
+		String status = "false";
+		if(objLoginDAO.checkLogin(uname, pwd)){
+			status = "true";
+		}
+		return status;
 	}
 }

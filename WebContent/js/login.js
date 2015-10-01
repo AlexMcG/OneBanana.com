@@ -23,13 +23,12 @@ $(function() {
 $('#login-submit').click(function(){
 	var uname = $('#email').val();
 	var pwd = $('#password').val();
-	alert("asdgfjk");
     $.ajax({
-        url : 'rest/login/validate',
+        url : 'rest/service/validate',
         type : 'POST',
         data : {uname: uname, pwd: pwd},
         success : function(response) {
-            alert(response);
+        	window.location = "home.jsp";
         }
     });
 });
