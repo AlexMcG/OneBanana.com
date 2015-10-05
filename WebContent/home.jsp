@@ -72,6 +72,9 @@
                     <li>
                         <a href="index.html#contact">Contact</a>
                     </li>
+                    <li>
+                        <a href="destroy">Logout</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
