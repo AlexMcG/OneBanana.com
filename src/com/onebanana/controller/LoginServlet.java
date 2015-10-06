@@ -6,6 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.onebanana.model.LoginModel;
 
@@ -44,6 +45,8 @@ public class LoginServlet extends HttpServlet {
 			LoginModel objLoginModel = new LoginModel();
 			boolean loginCheck = objLoginModel.checkLogin(uname, password);
 			if (loginCheck) {
+				HttpSession session = request.getSession();
+				session.setAttribute("uname", uname);
 				request.getRequestDispatcher("home.jsp").forward(request,
 						response);
 			} else {
